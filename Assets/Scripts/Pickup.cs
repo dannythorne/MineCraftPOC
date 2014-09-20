@@ -12,4 +12,14 @@ public class Pickup : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnTriggerEnter( Collider collider)
+	{
+		if( collider.tag == "Player")
+		{
+		    Debug.Log("trigger");
+			renderer.enabled = false;
+		}
+	}
+
 }
